@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1587516006 source:c:\users\matii\eclipse-workspace\clase 8\teoria estructuras\main.c
+	<stdlib.h>
+	<string.h>
+	"alumnos.h"
+
+1587515621 source:c:\users\matii\eclipse-workspace\clase 8\teoria estructuras\alumnos.c
+	"alumnos.h"
+
+1587515533 c:\users\matii\eclipse-workspace\clase 8\teoria estructuras\alumnos.h
+	<stdio.h>
+

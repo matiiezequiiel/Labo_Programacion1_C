@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1591706030 source:c:\users\matii\eclipse-workspace\abm memoria dinamica\abm\alumno.c
+	"Alumno.h"
+
+1591740166 c:\users\matii\eclipse-workspace\abm memoria dinamica\abm\alumno.h
+
+1591740163 source:c:\users\matii\eclipse-workspace\abm memoria dinamica\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumno.h"
+

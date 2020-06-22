@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1588629986 source:c:\users\matii\eclipse-workspace\clase 9\teoria\main.c
+	<stdlib.h>
+	"Alumno-Curso.h"
+
+1588629874 c:\users\matii\eclipse-workspace\clase 9\teoria\alumno.h
+	<stdio.h>
+
+1588630015 source:c:\users\matii\eclipse-workspace\clase 9\teoria\alumno.c
+	"Alumno.h"
+
+1588632057 source:c:\users\matii\eclipse-workspace\clase 9\teoria\alumno-curso.c
+	"Alumno-Curso.h"
+
+1588632057 c:\users\matii\eclipse-workspace\clase 9\teoria\alumno-curso.h
+	"Alumno.h"
+	"Curso.h"
+
+1588629984 c:\users\matii\eclipse-workspace\clase 9\teoria\curso.h
+
+1588629985 source:c:\users\matii\eclipse-workspace\clase 9\teoria\curso.c
+	"Curso.h"
+

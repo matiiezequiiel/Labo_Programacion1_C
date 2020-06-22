@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1588534994 source:c:\users\matii\eclipse-workspace\practica 1 parcial\parcial 2019\untitled1.c
+
+1588622375 source:c:\users\matii\eclipse-workspace\practica 1 parcial\parcial 2019\main.c
+	<stdio.h>
+	<stdlib.h>
+

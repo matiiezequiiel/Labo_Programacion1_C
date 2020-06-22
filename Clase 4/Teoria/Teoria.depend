@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1586307103 source:c:\users\matii\eclipse-workspace\clase 4\teoria\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+
+1586307042 c:\users\matii\eclipse-workspace\clase 4\teoria\funciones.h
+
+1586307042 source:c:\users\matii\eclipse-workspace\clase 4\teoria\funciones.c
+	<stdio.h>
+	<stdlib.h>
+

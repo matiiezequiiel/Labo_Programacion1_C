@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1588723436 source:c:\users\matii\eclipse-workspace\clase 11\teoria\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Proveedor-Producto.h"
+
+1588721870 c:\users\matii\eclipse-workspace\clase 11\teoria\proveedor-producto.h
+	"Productos.h"
+	"Proveedores.h"
+
+1588721927 c:\users\matii\eclipse-workspace\clase 11\teoria\productos.h
+
+1588721840 c:\users\matii\eclipse-workspace\clase 11\teoria\proveedores.h
+
+1588722868 source:c:\users\matii\eclipse-workspace\clase 11\teoria\proveedor-producto.c
+	"Proveedor-Producto.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1588721840 source:c:\users\matii\eclipse-workspace\clase 11\teoria\proveedores.c
+	"Proveedores.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1588723449 source:c:\users\matii\eclipse-workspace\clase 11\teoria\productos.c
+	"Productos.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

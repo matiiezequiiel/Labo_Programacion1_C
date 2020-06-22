@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1586215580 source:c:\users\matii\eclipse-workspace\clase 3\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1586219248 source:c:\users\matii\eclipse-workspace\clase 3\teoria\main.c
+	<stdio.h>
+	<stdlib.h>
+
