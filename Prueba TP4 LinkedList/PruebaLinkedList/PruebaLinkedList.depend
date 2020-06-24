@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1592864991 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Validaciones.h"
+	"Funciones.h"
+	"Controller.h"
+
+1592865162 c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\linkedlist.h
+
+1592865044 c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\employee.h
+
+1592865244 c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\parser.h
+
+1592865285 c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\validaciones.h
+
+1592865088 c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\funciones.h
+
+1592865002 c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\controller.h
+
+1592865034 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\employee.c
+	<stdlib.h>
+	<stdio.h>
+	"Employee.h"
+	"LinkedList.h"
+	<string.h>
+
+1592865079 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\funciones.c
+	"Funciones.h"
+	"Validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1592865307 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1592864944 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"Validaciones.h"
+	"Funciones.h"
+
+1592865235 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1592865375 source:c:\users\matii\desktop\prueba tp4 linkedlist\pruebalinkedlist\validaciones.c
+	"Validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
