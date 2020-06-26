@@ -70,15 +70,30 @@ int main()
             break;
 
         case 5:
-            controller_filterVuelosCortos(listaVuelos);
-            //FALTA CARGAR ARCHIVO
+            retorno=controller_filterVuelosCortos(listaVuelos);
+            if(retorno)
+            {
+                system("cls");
+                printf("\nArchivo guardado correctamente.\n\n");
+                system("pause");
+                archivoCargado=1;
+            }
+            else
+            {
+                system("cls");
+                printf("\nNo se pudo guardar el archivo.\n\n");
+                system("pause");
+            }
+            //ARREGLAR FECHA QUE CARGA DESTINO
 
             break;
 
         case 6:
+            controller_filterVuelosPortugal(listaVuelos,ListaPilotos);
             break;
 
         case 7:
+            controller_filterAlexLifeson(listaVuelos,ListaPilotos);
             break;
 
         default:
@@ -87,8 +102,7 @@ int main()
         }
 
 
-    }
-    while(opcion != 8);
+    }while(opcion != 8);
 
     return 0;
 }

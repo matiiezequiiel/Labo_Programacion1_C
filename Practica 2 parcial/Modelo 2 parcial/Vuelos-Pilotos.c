@@ -1,4 +1,5 @@
 #include"Vuelos-Pilotos.h"
+#include<stdio.h>
 
 
 void mostrarVuelos(eVuelo* pVuelo,ePiloto listaPilotos[])
@@ -6,8 +7,8 @@ void mostrarVuelos(eVuelo* pVuelo,ePiloto listaPilotos[])
     int idVuelo;
     int idAvion;
     int idPiloto;
-    char fecha[10];
-    char destino[30];
+    char fecha[20];
+    char destino[20];
     int cantPasajeros;
     int horaDespegue;
     int horaLlegada;

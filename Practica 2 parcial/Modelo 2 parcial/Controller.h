@@ -27,6 +27,10 @@ int controller_ListVuelos(LinkedList* pArrayListVuelos,ePiloto listaPilotos[]);
 
 int controller_cantPasajeros(LinkedList* pArrayListVuelos);
 
-controller_filterVuelosCortos(LinkedList* pArrayListVuelos);
+int controller_filterVuelosCortos(LinkedList* pArrayListVuelos);
+
+int controller_saveAsText(char* path, LinkedList* pArrayListVuelos);
+
+int controller_filterVuelosPortugal(LinkedList* pArrayListVuelos,ePiloto listaPilotos[]);
 
 

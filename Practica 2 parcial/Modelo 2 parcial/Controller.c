@@ -53,16 +53,19 @@ int controller_cargarArchivos(char* path, LinkedList* pArrayListVuelos)
 
 int parser_VueloFromText(FILE* pFile, LinkedList* pArrayListVuelos)
 {
-    char idVuelo[5];
-    char idAvion[5];
-    char idPiloto[5];
-    char fecha[11];
-    char destino[30];
-    char cantPasajeros[5];
-    char horaDespegue[5];
-    char horaLlegada[5];
+    char idVuelo[20];
+    char idAvion[20];
+    char idPiloto[20];
+    char fecha[20];
+    char destino[20];
+    char cantPasajeros[20];
+    char horaDespegue[20];
+    char horaLlegada[20];
     int retorno=0;
     eVuelo* pVuelo;
+
+   // printf("%d--%d--%d--%d--%d--%d--%d--%d",&idVuelo,&idAvion,&idPiloto,&fecha,&destino,&cantPasajeros,&horaDespegue,&horaLlegada);
+   // system("pause");
 
     while(!feof(pFile))
     {
@@ -70,6 +73,8 @@ int parser_VueloFromText(FILE* pFile, LinkedList* pArrayListVuelos)
         fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",idVuelo,idAvion,idPiloto,fecha,destino
                                                                         ,cantPasajeros,horaDespegue,horaLlegada);
 
+        // printf("%d--%d--%d--%d--%d--%d--%d--%d",strlen(idVuelo),strlen(idAvion),strlen(fecha),strlen(destino),strlen(cantPasajeros),strlen(horaDespegue),strlen(horaLlegada),strlen(idVuelo));
+        // system("pause");
 
         pVuelo=vuelo_newParametros(idVuelo,idAvion,idPiloto,fecha,destino,cantPasajeros,horaDespegue,horaLlegada);
 
@@ -147,3 +152,99 @@ int controller_cantPasajeros(LinkedList* pArrayListVuelos)
     return retorno;
 }
 
+int controller_filterVuelosCortos(LinkedList* pArrayListVuelos)
+{
+    int retorno=-1;
+    char nombreFile[10];
+    LinkedList* pLinkedListVuelosCortos=NULL;
+
+    if(pArrayListVuelos != NULL)
+    {
+        pLinkedListVuelosCortos=ll_filter(pArrayListVuelos,vuelosCortos);
+
+        if(pLinkedListVuelosCortos != NULL)
+        {
+            printf("Ingrese nombre del nuevo archivo a crear: ");
+            gets(nombreFile);
+            retorno=controller_saveAsText(nombreFile,pLinkedListVuelosCortos);
+
+        }
+
+
+    }
+
+    return retorno;
+
+}
+
+int controller_saveAsText(char* path, LinkedList* pArrayListVuelos)
+{
+    FILE* fileText;
+    eVuelo* p;
+    int i;
+    int retorno=0;
+
+    fileText=fopen(path,"w");
+
+    if(fileText!=NULL)
+    {
+        fprintf(fileText,"%s,%s,%s,%s,%s,%s,%s,%s\n","idVuelo","idAvion","idPiloto","fecha","destino","cantPasajeros","horaDespegue","horaLlegada");
+
+        for(i=0; i < ll_len(pArrayListVuelos); i++)
+        {
+            p = (eVuelo*)ll_get(pArrayListVuelos, i);
+            fprintf(fileText,"%d,%d,%d,%s,%s,%d,%d,%d\n",p->idVuelo,p->idAvion,p->idPiloto,p->fecha,p->destino,p->cantPasajeros,p->horaDespegue,p->horaLlegada);
+        }
+        retorno=1;
+        fclose(fileText);
+    }
+    return retorno;
+}
+
+int controller_filterVuelosPortugal(LinkedList* pArrayListVuelos,ePiloto listaPilotos[])
+{
+    int retorno=-1;
+    LinkedList* pLinkedListVuelosPortugal=NULL;
+
+    if(pArrayListVuelos != NULL)
+    {
+        pLinkedListVuelosPortugal=ll_filter(pArrayListVuelos,vuelosPortugal);
+
+        if(pLinkedListVuelosPortugal != NULL)
+        {
+           controller_ListVuelos(pLinkedListVuelosPortugal,listaPilotos);
+           retorno=1;
+
+        }
+
+
+    }
+
+    return retorno;
+
+
+}
+
+int controller_filterAlexLifeson(LinkedList* pArrayListVuelos,ePiloto listaPilotos[])
+{
+    int retorno=-1;
+    LinkedList* pLinkedListVuelosSinAlex=NULL;
+
+    if(pArrayListVuelos != NULL)
+    {
+        pLinkedListVuelosSinAlex=ll_filter(pArrayListVuelos,vuelosSinAlexLifeson);
+
+        if(pLinkedListVuelosSinAlex != NULL)
+        {
+           controller_ListVuelos(pLinkedListVuelosSinAlex,listaPilotos);
+           retorno=1;
+
+        }
+
+
+    }
+
+    return retorno;
+
+
+}

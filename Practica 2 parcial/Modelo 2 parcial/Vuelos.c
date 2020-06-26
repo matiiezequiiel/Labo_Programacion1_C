@@ -227,7 +227,7 @@ int vuelo_getFecha(eVuelo* this,char* fecha)
 
     if(this != NULL)
     {
-        strncpy(fecha,this->fecha,10);
+        strcpy(fecha,this->fecha);
         retorno=1;
     }
 
@@ -328,3 +328,58 @@ int cantidadPasajerosDestino(eVuelo* this)
 
 }
 
+int vuelosCortos(eVuelo* this)
+{
+    int retorno=-1;
+
+    if(this != NULL)
+    {
+        if((this->horaLlegada-this->horaDespegue)<=3)
+        {
+            retorno=1;
+        }
+        else
+        {
+            retorno=0;
+        }
+    }
+    return retorno;
+}
+
+int vuelosPortugal(eVuelo* this)
+{
+
+    int retorno=-1;
+
+    if(this != NULL)
+    {
+        if(strcmp(this->destino,"Portugal")==0)
+        {
+            retorno=1;
+        }
+        else
+        {
+            retorno=0;
+        }
+    }
+    return retorno;
+}
+
+int vuelosSinAlexLifeson(eVuelo* this)
+{
+
+    int retorno=-1;
+
+    if(this != NULL)
+    {
+        if(this->idPiloto != 1)
+        {
+            retorno=1;
+        }
+        else
+        {
+            retorno=0;
+        }
+    }
+    return retorno;
+}

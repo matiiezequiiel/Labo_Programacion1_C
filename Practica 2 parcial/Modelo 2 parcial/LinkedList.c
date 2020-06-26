@@ -542,12 +542,16 @@ LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element))
 
     if(this != NULL && fn != NULL)
     {
-        retornoFuncion=fn(ll_get(this,i));
+       for(int i=0;i<ll_len(this);i++)
+       {
+            retornoFuncion=fn(ll_get(this,i));
 
-        if(retornoFuncion)
-        {
-            ll_add(linkedListFilter,ll_get(this,i));
-        }
+            if(retornoFuncion)
+            {
+                ll_add(linkedListFilter,ll_get(this,i));
+            }
+
+       }
 
     }
 

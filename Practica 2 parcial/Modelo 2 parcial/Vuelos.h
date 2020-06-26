@@ -4,8 +4,8 @@ typedef struct
     int idAvion;
     int idPiloto;
     char fecha[10];
-    char destino[30];
     int cantPasajeros;
+    char destino[30];
     int horaDespegue;
     int horaLlegada;
 
@@ -61,3 +61,6 @@ int vuelo_getHoraLlegada(eVuelo* this,int* horaLlegada);
 
 int cantidadPasajerosTotal(eVuelo* this);
 int cantidadPasajerosDestino(eVuelo* this);
+int vuelosCortos(eVuelo* this);
+int vuelosPortugal(eVuelo* this);
+int vuelosSinAlexLifeson(eVuelo* this);
