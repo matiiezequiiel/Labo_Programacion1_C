@@ -288,6 +288,8 @@ int vuelo_getHoraLlegada(eVuelo* this,int* horaLlegada)
     return retorno;
 
 }
+/*****************************************************************************************************************************/
+/*FUNCIONES CRITERIOS*/
 
 int cantidadPasajerosTotal(eVuelo* this)
 {

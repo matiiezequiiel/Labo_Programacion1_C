@@ -59,6 +59,9 @@ int vuelo_getCantPasajeros(eVuelo* this,int* cantPasajeros);
 int vuelo_getHoraDespegue(eVuelo* this,int* horaDespegue);
 int vuelo_getHoraLlegada(eVuelo* this,int* horaLlegada);
 
+/*****************************************************************************************************************************/
+/*FUNCIONES CRITERIOS*/
+
 int cantidadPasajerosTotal(eVuelo* this);
 int cantidadPasajerosDestino(eVuelo* this);
 int vuelosCortos(eVuelo* this);

@@ -408,6 +408,20 @@ LinkedList* ll_clone(LinkedList* this);
  */
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 
+
+/** \brief Acumula lo devuelto por la funcion criterio.
+ * \param pList LinkedList* PUNTERO A LA LISTA
+ * \param pFunc (*pFunc) PUNTERO A LA FUNCI�N CRITERIO
+ * \return int RETORNA  Total de elementos contados.
+ *
+ */
 int ll_count(LinkedList* this,int (*pFunc)(void* pElement));
 
+
+/** \brief Crea una nueva Linkedlist segun un criterio de filtro.
+ * \param pList LinkedList* PUNTERO A LA LISTA
+ * \param pFunc (*pFunc) PUNTERO A LA FUNCI�N CRITERIO
+ * \return int LinkedList filtrada.
+ *
+ */
 LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element));
